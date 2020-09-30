@@ -8,10 +8,10 @@ export const Container = styled.div`
     background: #9bf3f0;
   }
   .colored:nth-child(3) {
-    background: #473198;
+    background: #bdd4e7;
   }
   .colored:nth-child(4) {
-    background: #4a0d67;
+    background: #637074;
   }
   .colored:nth-child(5) {
     background: #adfc92;

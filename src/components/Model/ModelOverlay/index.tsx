@@ -34,8 +34,6 @@ const ModelOverlay: React.FC<Props> = ({ model, children }) => {
     window.addEventListener('resize', onResize)
 
     return () => window.removeEventListener('resize', onResize)
-
-
   }, [getSectionDimensions, model.sectionRef])
 
   const { scrollY } = useWrapperScroll()
@@ -51,7 +49,11 @@ const ModelOverlay: React.FC<Props> = ({ model, children }) => {
     [0, 1, 1, 0]
   )
 
-  return <Container style={{ opacity }}>{children}</Container>
+  const pointerEvents = useTransform(opacity, value =>
+    value > 0 ? 'auto' : 'none'
+  )
+
+  return <Container style={{ opacity, pointerEvents }}>{children}</Container>
 }
 
 export default ModelOverlay
