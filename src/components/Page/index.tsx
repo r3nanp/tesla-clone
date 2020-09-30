@@ -22,10 +22,10 @@ const Page: React.FC = () => {
             <ModelsSection
               key={modelName}
               className="colored"
-              modelName="Model One"
+              modelName={modelName}
               overlayNode={
                 <DefaultOverlayContent
-                  label="Model One"
+                  label={modelName}
                   description="Order Online from Delivery"
                 />
               }
