@@ -7,7 +7,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   *, input, button {
-    outline: none;
+    outline: 0;
+    border: none;
     font-family: 'Roboto', sans-serif;
   }
 `
