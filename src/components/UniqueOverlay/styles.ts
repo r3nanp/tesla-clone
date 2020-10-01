@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+
+import { motion } from 'framer-motion'
 import { BurgerSVG, LogoSVG } from './IconSVG'
 
 export const Container = styled.div`
@@ -36,45 +38,39 @@ export const Burger = styled(BurgerSVG)`
   padding-right: 5px;
 `
 
-export const Footer = styled.footer`
+export const Footer = styled(motion.footer)`
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 
-  > ul {
+  ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    > li {
+    li {
       list-style: none;
-
+      font-size: 14px;
       & + li {
         margin: 10px 0 0;
       }
-
-      > a {
-        font-size: 14px;
+      a {
         text-decoration: none;
         color: #393c41;
-
         &:hover {
-          color: black;
+          color: #000;
         }
       }
     }
   }
-
   margin-bottom: 30px;
 
   @media (min-width: 600px) {
     margin-bottom: 38px;
-
-    > ul {
+    ul {
       flex-direction: row;
-
       li + li {
         margin: 0 0 0 30px;
       }

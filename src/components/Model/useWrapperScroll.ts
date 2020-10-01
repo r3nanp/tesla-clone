@@ -11,23 +11,24 @@ export default function useWrapperScroll() {
   const scrollYProgress = useMotionValue(0)
 
   useEffect(() => {
-    const element = wrapperRef.current
-
-    if (element) {
+    if (wrapperRef?.current) {
       const updateScrollValue = () => {
-        const { scrollTop, scrollHeight, offsetHeight } = element
+        if (wrapperRef.current) {
+          const { scrollTop, scrollHeight, offsetHeight } = wrapperRef.current
 
-        const fullScroll = scrollHeight - offsetHeight
+          const fullScroll = scrollHeight - offsetHeight
 
-        scrollY.set(scrollTop) //px
-        scrollYProgress.set(scrollTop / fullScroll) // %
+          scrollY.set(scrollTop)
+          scrollYProgress.set(scrollTop / fullScroll)
+        }
       }
 
-      element.addEventListener('scroll', updateScrollValue)
+      wrapperRef.current.addEventListener('scroll', updateScrollValue)
 
-      return () => element.removeEventListener('scroll', updateScrollValue)
+      return () =>
+        wrapperRef?.current?.removeEventListener('scroll', updateScrollValue)
     }
-  }, [scrollY, scrollYProgress, wrapperRef])
+  }, [wrapperRef, scrollY, scrollYProgress])
 
   return { scrollY, scrollYProgress }
 }
