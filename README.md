@@ -1,4 +1,4 @@
-<img align="center" src="./.github/"> <br />
+<img align="center" src="./.github/desktop.gif"> <br />
 
 # Tesla Clone
   A clone of tesla website written in react, using framer motion to made animations.
