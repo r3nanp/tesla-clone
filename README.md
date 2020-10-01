@@ -7,6 +7,8 @@
 # Tesla Clone
   A clone of Tesla animations written in React, using framer motion to made the animations.
 
+![r3nanp](https://img.shields.io/badge/r3nanp-tesla--clone-blue)
+
 ## Techologies
 - React
 - Typescript
@@ -34,4 +36,4 @@ yarn start
 ```
 
 ## Screenshots
-  <img src="./.github/mobile-screenshot.png>
+  <img src="./.github/mobile-screenshot.png">
