@@ -1,7 +1,11 @@
-<img align="center" src="./.github/desktop.gif"> <br />
+<div align="center">
+  <img src="./.github/desktop.gif">
+</div>
+
+<br />
 
 # Tesla Clone
-  A clone of tesla website written in react, using framer motion to made animations.
+  A clone of Tesla animations written in React, using framer motion to made the animations.
 
 ## Techologies
 - React
