@@ -29,6 +29,5 @@ yarn or npm install
 yarn start
 ```
 
-
 ## Screenshots
   <img src="./.github/mobile-screenshot.png>
